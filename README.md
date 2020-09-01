@@ -3,7 +3,7 @@ python3 websockets video stream sample
 
 ## Requirement
 ```bash
-sudo pip3 install -r requirement.txt
+sudo pip3 install -r requirements.txt
 ```
 
 ## Start websocket server
