@@ -1,18 +1,16 @@
 # websockets_video_stream
-python3 websockets video stream sample
+Using WebSockets for video (frames) streaming.  
+This repo contains 2 sample applications which use:
+- [Django channels](https://channels.readthedocs.io/en/stable/)
+- [Python 3 websockets](https://websockets.readthedocs.io/en/stable/intro.html)
 
-## Requirement
-```bash
-sudo pip3 install -r requirements.txt
-```
+---
 
-## Start websocket server
-```bash
-$ python3 server.py
-```
-## Start websocket client
-```bash
-$ python3 client.py
-```
+## Django channels
+Take a look at [django_channels](django_channels)
 
-## Open [client.html](client.html) with browser
+
+---
+
+## Python3 websockets
+Take a look at [websockets](websockets)
