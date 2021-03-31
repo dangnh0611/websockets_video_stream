@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WebSocket Video Stream</title>
+    </head>
+    <body>
+        {{ room_name|json_script:"room-name" }}
+        <h1>Camera streaming using Websocket</h1>
+        <img id="camera" src="" />
+        <script>
+            const roomName = JSON.parse(document.getElementById('room-name').textContent);
+            const ws = new WebSocket(
+                'ws://'
+                + window.location.host
+                + '/ws/videostream/'
+                + roomName
+                + '/'
+                );
+            ws.onmessage = function (event) {
+                msg=JSON.parse(event.data);
+                console.log(msg)
+                if(msg.type==='frame'){
+                    var img_container=document.querySelector("#camera");
+                    img_container.src="data:img/jpeg;base64,"+ msg.data;
+                }
+            };
+
+            ws.onclose= function(event){
+                console.log('Connection closed!')
+            }
+            ws.onerror=function(event){
+                console.log('An error occur!')
+            }
+        </script>
+    </body>
+</html>
