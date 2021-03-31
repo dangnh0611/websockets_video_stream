@@ -1,16 +1,21 @@
-## Install dependence
-```bash
-$ sudo pip3 install -r requirements.txt
-```
+# Django channels video stream
+Django channels video stream sample
 
+## Virtual environment and dependencies
+```bash
+python3 -m venv venv
+source venv/bin/activate 
+pip3 install -r requirements.txt
+```
 ## Database migrate
 ```bash
-$ python3 manage.py migration
+cd mysite
+python3 manage.py migration
 ```
 
 ## Start django app
-```
-$ python3 manage.py runserver
+```bash
+python3 manage.py runserver
 ```
 
 ## Tesing
